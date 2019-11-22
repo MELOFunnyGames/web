@@ -1,0 +1,140 @@
+body {
+  background: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+#logo1 {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#logo2 {
+  z-index: 2;
+  margin-left: -1px;
+  margin-top: 0px;
+  transition: 0.2s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#pathLogo2 {
+  transition: 0.2s ease;
+}
+
+#pathLogo2.animated:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  animation: none;
+}
+
+.animated {
+  animation: faceColor 1s infinite;
+}
+
+.logoClicked {
+  margin-top: -4px !important;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes faceColor {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* Standard syntax */
+@keyframes faceColor {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+#mainTextContainer {
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  opacity: 0.9;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 200px;
+}
+
+#mainTextContainer:before,
+#mainTextContainer:after {
+  opacity: 0.5;
+  font-weight: lighter;
+}
+
+#mainTextContainer:before {
+  content: "<";
+}
+#mainTextContainer:after {
+  content: "/>";
+}
+
+#rightMenu {
+  z-index: 3;
+  position: fixed;
+  right: 0%;
+  top: 50%;
+  transform: translateY(0%, -50%);
+  text-align: right;
+  padding: 0px 40px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: lighter;
+  opacity: 0.2;
+  width: 100px;
+}
+
+.menuItem {
+  cursor: pointer;
+  width: 100%;
+  text-align: right;
+}
+
+@media (max-width: 40rem) {
+  #logo1,
+  #logo2 {
+    transform: scale(2);
+    margin-top: 100px;
+  }
+  .logoClicked {
+    margin-top: 96px !important;
+  }
+}
