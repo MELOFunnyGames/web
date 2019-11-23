@@ -46,7 +46,7 @@ body {
 }
 
 .animated {
-  animation: faceColor .7s infinite;
+  animation: faceColor 0.7s infinite;
 }
 
 .logoClicked {
@@ -214,6 +214,10 @@ body {
 #x_blanca {
   cursor: pointer;
 }
+/* 
+#x_blanca:hover .st3{
+  stroke: #00000008
+} */
 
 .wordRightMenu:hover {
   cursor: pointer;
@@ -239,6 +243,7 @@ body {
   position: fixed;
   top: 36px;
   right: 36px;
+  display: none;
 }
 
 #copyright {
@@ -262,6 +267,9 @@ body {
 }
 
 @media (max-width: 40rem) {
+  .cross {
+    display: block;
+  }
   #logo1,
   #logo2 {
     transform: scale(2) translate(-25%, -25%);

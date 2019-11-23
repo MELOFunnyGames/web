@@ -18,11 +18,21 @@ var sentenceLength = sentence.length;
 
 $(document).ready(function() {
   
+
+
 $("#pathLogo2").click(function() {
-  $(this).removeClass("animated");
-  $("#logo2").addClass("logoClicked");
+
+  //$("#pathLogo2").removeClass("animated");
+  //$("#logo2").addClass("logoClicked");
   $("#mainTextContainer").fadeIn(300);
   setTimeout(typeWriter, 400);
+
+  var logo2 = document.getElementById("logo2");
+  logo2.classList.add('logoClicked');
+  
+  var pathLogo2 = document.getElementById("pathLogo2");
+  pathLogo2.classList.remove('animated');
+
 });
 
 $(".menuItem").click(function() {
@@ -45,7 +55,7 @@ $(".wordRightMenu").click(function() {
   }, 200);
 });
 
-$("#x_blanca").click(function() {
+$("#x_blanca,#x_grande").click(function() {
   $("#fondoBlanco").fadeOut(500);
   $("#MenuContainer").fadeOut(500);
   $("#MenuContainer").fadeOut(500);
