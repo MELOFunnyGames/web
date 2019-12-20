@@ -108,25 +108,89 @@ body {
   content: " />";
 }
 
-#rightMenu {
+.menu {
   z-index: 3;
   position: fixed;
-  right: 0%;
-  top: 50%;
+  top: 43%;
   transform: translateY(0%, -50%);
-  text-align: right;
   padding: 0px 40px;
   font-size: 11px;
   line-height: 30px;
-  font-weight: lighter;
-  opacity: 0.5;
   width: 100px;
 }
 
+#rightMenu {
+  right: 0%;
+}
+
+#leftMenu {
+  left: 0%;
+}
+
 .menuItem {
+  background-color: transparent;
+  height: 30px;
+  opacity: 0.5;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.menuItem:hover {
   cursor: pointer;
   width: 100%;
+  opacity: 1;
+}
+
+.menuItem.selectedLeftMenu {
+  opacity: 1;
+}
+
+#rightMenu .menuItem {
   text-align: right;
+}
+
+#leftMenu .menuItem {
+  text-align: left;
+}
+
+.barMenu {
+  position: absolute;
+  background-color: black;
+}
+
+.barMenuPos1 {
+  top: 0;
+}
+
+.barMenuPos2 {
+  top: 25%;
+}
+
+.barMenuPos3 {
+  top: 50%;
+}
+
+.barMenuPos4 {
+  top: 75%;
+}
+
+.barMenuEnabled {
+  left: 0%;
+}
+
+.barMenuDisabled {
+  left: -20%;
+}
+
+#bar1-leftmenu {
+  height: 94%;
+  width: 10px;
+}
+
+#bar2-leftmenu {
+  height: 30px;
+  width: 25px;
+  transition: 0.2s ease;
 }
 
 #fondoBlanco {
@@ -144,6 +208,20 @@ body {
   height: 100%;
   background-color: transparent;
   position: fixed;
+  overflow: hidden;
+  z-index: 4;
+  /* display: flex; */
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#MenuContainerLeft {
+  width: calc(100vw - 300px);
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  right: 150px;
   overflow: hidden;
   z-index: 4;
   /* display: flex; */
@@ -210,6 +288,12 @@ body {
   background: gray;
 }
 
+.divDocLeftMenu {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
 #x_grande,
 #x_blanca {
   cursor: pointer;
@@ -264,6 +348,9 @@ body {
   width: 70px;
   position: fixed;
   margin-top: -190px;
+}
+.logoSection img:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 40rem) {
