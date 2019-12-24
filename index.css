@@ -53,6 +53,10 @@ body {
   margin-top: -4px !important;
 }
 
+.clearfix {
+  clear: both;
+}
+
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes faceColor {
   0% {
@@ -290,8 +294,13 @@ body {
 
 .divDocLeftMenu {
   width: 100%;
-  height: 100%;
   background-color: transparent;
+  position: fixed;
+  width: 75vw;
+  height: 75vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #x_grande,
@@ -351,6 +360,215 @@ body {
 }
 .logoSection img:hover {
   cursor: pointer;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.left0 {
+  left: 0px;
+}
+
+.top0 {
+  top: 0px;
+}
+
+.w-30 {
+  width: 40%;
+}
+
+.w-40 {
+  width: 50%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/* -- Menu Left Elements -- */
+.headerSectionLeft {
+  position: absolute;
+  background-color: white;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  padding: 20px 0px;
+}
+
+.titleSectionLeft {
+  float: left;
+  font-size: 20px;
+}
+
+.crossMenuLeft {
+  float: right;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.crossMenuLeft img {
+  width: 100%;
+  height: 100%;
+}
+
+.sectionLeftContainer {
+  height: calc(100% - 110px);
+  width: 100%;
+  overflow-y: scroll;
+  margin-top: 65px;
+}
+
+.errorLeftContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+.errorLeftContainer div {
+  background: red;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 30px;
+}
+
+.primaryPicture {
+  width: 60%;
+  height: 600px;
+  float: left;
+}
+
+.secondaryPicture {
+  width: 40%;
+  height: 300px;
+  float: left;
+  position: relative;
+}
+
+.secondaryPicture.redContent::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+  padding: 10px 30px;
+  background-color: #e30613;
+}
+
+.redContent.soon::after {
+  content: "SOON";
+}
+
+.redContent.now::after {
+  content: "NOW";
+}
+
+.halfPicture {
+  width: 50%;
+  height: 100px;
+  float: left;
+}
+
+.sectionLeftContainer::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sectionLeftContainer::-webkit-scrollbar-track {
+  background: white;
+}
+
+.sectionLeftContainer::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+/* --/ Menu Left Elements -- */
+.timeLine{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+#AdelacruzmeloSide .timeLine {
+  justify-content: end;
+  flex-direction: row-reverse;
+  
+}
+
+.timeYear {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  width: 150px;
+  font-style: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.timeImg div {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 300px;
+  float: right;
+}
+
+.timeDesc{
+  width: 300px;
+  text-align: right;
+  padding: 20px 10px;
+  color: gray;
+  font-weight: 100;
+}
+
+.d-block {
+  display: block;
 }
 
 @media (max-width: 40rem) {
